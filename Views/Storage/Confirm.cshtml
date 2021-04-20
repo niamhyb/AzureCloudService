@@ -1,0 +1,36 @@
+﻿@model AzureData.Models.DataStorage
+
+@{
+    ViewData["Title"] = "Confirm";
+}
+
+<h1>Confirm</h1>
+
+<div>
+    <h4>DataStorage</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StoragedUsed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StoragedUsed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RedundancyType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RedundancyType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StorageCost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StorageCost)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Calculate">Calculate New storage</a>
+</div>

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\dyana\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dyana\\.nuget\\packages"
+    ]
+  }
+}

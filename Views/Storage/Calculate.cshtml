@@ -1,0 +1,43 @@
+﻿@model AzureData.Models.DataStorage
+
+@{
+    ViewData["Title"] = "Calculate Storage";
+}
+
+<h2>Calculate</h2>
+
+<h4>Data Storage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Calculate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StoragedUsed" class="control-label"></label>
+                <input asp-for="StoragedUsed" class="form-control" />
+                <span asp-validation-for="StoragedUsed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RedundancyType" class="control-label"></label>
+                @Html.DropDownList("RedundancyType", null, new { @class = "form-control" })
+                <span asp-validation-for="RedundancyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StorageCost" class="control-label"></label>
+                <input asp-for="StorageCost" class="form-control" />
+                <span asp-validation-for="StorageCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
